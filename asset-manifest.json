@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/donstu-project/static/css/main.796337f6.chunk.css",
+    "main.js": "/donstu-project/static/js/main.6c7a1d47.chunk.js",
+    "main.js.map": "/donstu-project/static/js/main.6c7a1d47.chunk.js.map",
+    "runtime-main.js": "/donstu-project/static/js/runtime-main.8211c7c0.js",
+    "runtime-main.js.map": "/donstu-project/static/js/runtime-main.8211c7c0.js.map",
+    "static/js/2.0b138d14.chunk.js": "/donstu-project/static/js/2.0b138d14.chunk.js",
+    "static/js/2.0b138d14.chunk.js.map": "/donstu-project/static/js/2.0b138d14.chunk.js.map",
+    "static/js/3.d318f8bc.chunk.js": "/donstu-project/static/js/3.d318f8bc.chunk.js",
+    "static/js/3.d318f8bc.chunk.js.map": "/donstu-project/static/js/3.d318f8bc.chunk.js.map",
+    "index.html": "/donstu-project/index.html",
+    "static/css/main.796337f6.chunk.css.map": "/donstu-project/static/css/main.796337f6.chunk.css.map",
+    "static/js/2.0b138d14.chunk.js.LICENSE.txt": "/donstu-project/static/js/2.0b138d14.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8211c7c0.js",
+    "static/js/2.0b138d14.chunk.js",
+    "static/css/main.796337f6.chunk.css",
+    "static/js/main.6c7a1d47.chunk.js"
+  ]
+}
