@@ -1,7 +1,13 @@
 import React from "react";
+import "./InformationSecurityContent.css"
 
 export const InformationSecurityContent = () => {
   return (
-      <p>Second</p>
+      <div className="container">
+        <div>
+          <p>First card </p>
+        </div>
+      </div>
+
   )
 }

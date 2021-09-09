@@ -9,15 +9,18 @@ import './Header.css'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
     flexGrow: 1,
+
   },
+
 }));
-export const HeaderItem = () => {
+export const Header = () => {
   const classes = useStyles();
   return (
       <div className={classes.root}>
@@ -29,7 +32,7 @@ export const HeaderItem = () => {
                   <ul className="header-nav__menu">
                     <li className="header-nav__menu-items">
                       <NavLink
-                          classname="header-nav__menu-link"
+                          className="header-nav__menu-link"
                           activeClassName="header-nav__menu-link--active"
                           to={PATH.security}
                       >
@@ -39,7 +42,7 @@ export const HeaderItem = () => {
                     </li>
                     <li className="header-nav__menu-items">
                       <NavLink
-                          classname="header-nav__menu-link"
+                          className="header-nav__menu-link"
                           activeClassName="header-nav__menu-link--active"
                           to={PATH.information}
                       >
