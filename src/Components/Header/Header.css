@@ -17,4 +17,16 @@ li {
 
 .header-nav__menu-items {
   text-align: center;
+
+}
+
+.header-nav__menu-link {
+  text-decoration: none;
+  color: #fff;
+
+}
+
+.header-nav__menu-link--active {
+  color: darkgoldenrod;
+  text-decoration: none;
 }

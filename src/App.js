@@ -3,16 +3,20 @@ import './App.css';
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import {Container} from '@material-ui/core';
 import {WebSecurityContent} from "./Components/WebSecurityContent/WebSecurityContent";
-import {HeaderItem} from "./Components/Header/HeaderItem";
+import {Header} from "./Components/Header/Header";
 import {PATH} from "./path";
 import {InformationSecurityContent} from "./Components/InformationSecurityContent/InformationSecurityContent";
+import {Main} from "./Components/Main/Main";
 
 function App() {
   return (
-      <>
+      <div className="app">
         <BrowserRouter>
-          <HeaderItem/>
+          <Header/>
           <Switch>
+            <Route exact path={PATH.main}>
+              {Main}
+            </Route>
             <Route exact path={PATH.security}>
               {WebSecurityContent}
             </Route>
@@ -22,12 +26,12 @@ function App() {
             <Route exact path={PATH.information}>
               {InformationSecurityContent}
             </Route>
-            <Redirect to={PATH.security}/>
+            <Redirect to={PATH.main}/>
           </Switch>
           <Container>
           </Container>
         </BrowserRouter>
-      </>
+      </div>
   )
 }
 
