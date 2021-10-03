@@ -7,7 +7,7 @@ import {Header} from "./Components/Header/Header";
 import {PATH} from "./path";
 import {InformationSecurityContent} from "./Components/InformationSecurityContent/InformationSecurityContent";
 import {Main} from "./Components/Main/Main";
-
+///
 function App() {
   return (
       <div className="app">
@@ -18,7 +18,7 @@ function App() {
               {Main}
             </Route>
             <Route exact path={PATH.security}>
-              {WebSecurityContent}
+              <WebSecurityContent/>
             </Route>
             <Route exact path={PATH.information}>
               {InformationSecurityContent}
