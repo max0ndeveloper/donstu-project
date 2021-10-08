@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css';
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import {Container} from '@material-ui/core';
-import {WebSecurityContent} from "./Components/WebSecurityContent/WebSecurityContent";
+import WebSecurityContent from "./Components/WebSecurityContent/WebSecurityContent";
 import {Header} from "./Components/Header/Header";
 import {PATH} from "./path";
 import {InformationSecurityContent} from "./Components/InformationSecurityContent/InformationSecurityContent";
@@ -18,7 +18,7 @@ function App() {
               {Main}
             </Route>
             <Route exact path={PATH.security}>
-              {WebSecurityContent}
+              <WebSecurityContent/>
             </Route>
             <Route exact path={PATH.information}>
               {InformationSecurityContent}
