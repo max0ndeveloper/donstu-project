@@ -10,11 +10,38 @@ body {
 }
 
 p {
-  color: #fff
+  color: #000
 }
 
-.app {
-  height: 100vh;
-  background: rgb(8,3,93);
-  background: linear-gradient(90deg, rgba(8,3,93,1) 0%, rgba(67,67,223,1) 54%, rgba(0,212,255,1) 100%);
+.container {
+  max-width: 945px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.header{
+  position: static;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: white;
+  margin-bottom: 28px;
+  height: 60px;
+}
+
+.header-logo {
+  width: 325px;
+  height: 50px;
+}
+
+.header-logo__logo {
+  margin: 5px 0 5px 0;
+
+}
+
