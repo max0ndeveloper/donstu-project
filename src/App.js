@@ -5,21 +5,19 @@ import {Container} from '@material-ui/core';
 import {Header} from "./Components/Header/Header";
 import {PATH} from "./path";
 import Main from "./Components/Main/Main";
+import NotFound from "./Components/NotFound/NotFound";
+import Article from "./Components/Article/Article"
 
 function App() {
   return (
       <div className="app">
         <BrowserRouter>
-
           <Header/>
           <Switch>
-            <Route exact path={PATH.main}>
-              <Main/>
-            </Route>
-            <Redirect to={PATH.main}/>
+            <Route path="/" exact component={Main}/>
+            <Route path="/articles/:_id/:header" exact component={Article}/>
+           <Route path="*" exact component={NotFound}/>
           </Switch>
-          <Container>
-          </Container>
         </BrowserRouter>
       </div>
   )
