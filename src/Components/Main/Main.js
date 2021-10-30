@@ -1,11 +1,17 @@
 import React, {useEffect} from "react";
 import useFetch from "../../Hooks/useFetch";
 import ReactMarkdown from 'react-markdown'
-
-
+import {NavLink, useHistory, useParams} from "react-router-dom";
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+import Temp from "../../Assets/images/1.png"
 
 
  const Main = () => {
+
+  const history = useHistory();
+   console.log(history)
 
    const url = '/articles'
    const [{isLoading, response, error}, doFetch] = useFetch(url);
@@ -14,7 +20,10 @@ import ReactMarkdown from 'react-markdown'
      doFetch()
    }, [doFetch])
 
-   const spinnerJSX = isLoading ? <div>Идёт загрузка</div> : null;
+   const spinnerJSX = isLoading ?
+       <Box sx={{ display: 'flex' }}>
+          <CircularProgress />
+       </Box> : null;
 
    const articleJSX = (articles) => {
      return (
@@ -25,18 +34,25 @@ import ReactMarkdown from 'react-markdown'
      )
    }
 
-   const contentJSX = response ? response.map(function (item, index) {
-     return (<div key={index}>
-       <div>
-         {item.header}
-       </div>
-       <hr/>
-       <div>
-         {
-           console.log('item', item)
-         }
 
-         {articleJSX(item.contents)}
+
+
+
+   const contentJSX = response ? response.map(function (item, index) {
+
+     const articleHandler = ()=> {
+       history.push(`/articles/${item._id}/${item.header}`)
+     };
+
+     return (<div className="article-container" key={index} onClick={articleHandler}>
+       <h1 className="article-header">
+         {item.header}
+       </h1>
+       <div className="article-img">
+         <img className="article-img__img" src={Temp} alt="temp"/>
+       </div>
+       <div>
+         {articleJSX(item.description)}
        </div>
      </div>)
    }) : null
@@ -44,7 +60,10 @@ import ReactMarkdown from 'react-markdown'
    return (
        <div className="container">
          {spinnerJSX}
-         {contentJSX}
+         <div className="container-content">
+           {contentJSX}
+         </div>
+
        </div>
 
 
