@@ -9,7 +9,7 @@ const NotFound = () => {
   let history = useHistory();
 
   const goBack = () => {
-    history.go(-1)
+    history.push("/")
   }
 
   return (
