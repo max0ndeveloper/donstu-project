@@ -5,7 +5,8 @@ import {NavLink, useHistory, useParams} from "react-router-dom";
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-import Temp from "../../Assets/images/1.png"
+import Temp from "../../Assets/images/temp.png"
+import {Header} from "../Header/Header"
 
 
  const Main = () => {
@@ -44,33 +45,38 @@ import Temp from "../../Assets/images/1.png"
        history.push(`/articles/${item._id}/${item.header}`)
      };
 
-     return (<div className="article-container" key={index} onClick={articleHandler}>
-       <h1 className="article-header">
-         {item.header}
-       </h1>
-       <div className="article-img">
-         <img className="article-img__img" src={Temp} alt="temp"/>
+     return (<div className="main-container" key={index} onClick={articleHandler}>
+       <div className="main-container__content">
+         <h1 className="main-header">
+           {item.header}
+         </h1>
+         <div className="article-img">
+           <img className="article-img__img" src={Temp} alt="temp"/>
+         </div>
+         <div>
+           {articleJSX(item.description)}
+         </div>
        </div>
-       <div>
-         {articleJSX(item.description)}
-       </div>
+
      </div>)
    }) : null
 
    return (
+
+       <div>
+         <Header/>
        <div className="container">
          {spinnerJSX}
          <div className="container-content">
            {contentJSX}
          </div>
-
        </div>
-
+       </div>
 
    )
 
  }
 
 
+export default Main;
 
-   export default Main;
