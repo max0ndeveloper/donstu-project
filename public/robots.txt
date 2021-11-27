@@ -1,0 +1,27 @@
+#                      /^--^\     /^--^\     /^--^\            .-----------------------------------.
+#                      \____/     \____/     \____/           (  Ща мы вам покажем, кузькину мать!  )
+#                     /      \   /      \   /      \           ,-----------------------------------'
+#KAT                 | google | | yandex | | others |        -'
+#                     \__  __/   \__  __/   \__   _/
+#|^|^|^|^|^|^|^|^|^|^|^|^\ \^|^|^|^/ /^|^|^|^|^\ \^|^|^|^|^|^|^|^|^|^|^|^|
+#| | | | | | | | | | | | |\ \| | |/ /| | | | | | \ \ | | | | | | | | | | |
+#########################/ /######\ \###########/ /#######################
+#| | | | | | | | | | | | \/| | | | \/| | | | | |\/ | | | | | | | | | | | |
+#|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_asciiart.eu
+
+User-agent: *
+Disallow: /redirect
+Disallow: /admin
+Disallow: /auth
+Disallow: /hit
+Disallow: /private
+Disallow: /search
+Disallow: /writing
+Allow: /static/*.css
+Allow: /static/*.js
+Allow: /.well-known/*.json
+
+User-agent: Twitterbot
+Disallow:
+
+Sitemap: https://staysecured.online/sitemap.xml

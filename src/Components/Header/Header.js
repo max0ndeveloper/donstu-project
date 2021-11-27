@@ -1,32 +1,50 @@
-import React from 'react'
-import {Container} from "@material-ui/core";
+import React, {useEffect} from 'react'
 import '../../Assets/fonts/fonts.css'
 import Logo from "../../Assets/images/logo.svg"
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
-import {NavLink, useHistory, useParams} from "react-router-dom";
-
-
-
+import {useHistory} from 'react-router-dom';
+import useFetch from "../../Hooks/useFetch";
 
 export const Header = () => {
   const history = useHistory();
-  console.log(history)
 
   const goBack = () => {
     history.push(`/`)
   }
 
+  const url = '/articles'
+
+  const [{isLoading, response, error}, doFetch] = useFetch(url);
+  useEffect(() => {
+    doFetch()
+  }, [doFetch])
+
+
+  const fuzzysort = require('fuzzysort')
+
+
+    const onSearch = (event) => {
+      const result = fuzzysort.go(event, response, {key: "header"})
+      result.map(function(item) {
+        console.log(item.score)
+        // if(item.score > -50) {
+        //   history.push(`/articles/${item.obj._id}/${item.obj.header}`)
+        // }
+      })
+    }
+
+
+
   return (
       <div className="header">
-          <div className="header-logo" onClick={goBack}>
-            <img className="header-logo__logo" src={Logo} alt="Logo"/>
-
-          </div>
-          <div className="header-input">
-            <input type="text" id="header-input__text" placeholder="Поиск по статьям"/>
-          </div>
+        <div className="header-logo" onClick={goBack}>
+          <img className="header-logo__logo" src={Logo} alt="Logo"/>
+        </div>
+        <div className="header-input">
+          <input type="text"
+                 id="header-input__text"
+                 placeholder="Поиск по статьям"
+                 onChange={event => onSearch(event.target.value)}/>
+        </div>
         <div className="header-button">
           <div className="header-button_reg">
             <p className="header-button_reg-text">Регистрация</p>
@@ -37,7 +55,6 @@ export const Header = () => {
             </p>
           </div>
         </div>
-
       </div>
   )
 }
