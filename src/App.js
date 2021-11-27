@@ -12,7 +12,6 @@ import NotFound from "./Components/NotFound/NotFound";
 function App() {
   return (
       <div className="app">
-        {/*<Header/>*/}
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={Main}/>
