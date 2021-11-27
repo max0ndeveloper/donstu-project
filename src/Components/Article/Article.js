@@ -15,13 +15,16 @@ const Article = () => {
   console.log(articleId)
   const url = '/articles'
   const [{isLoading, response, error}, doFetch] = useFetch(url);
+
   useEffect(() => {
     doFetch()
   }, [doFetch])
+
   const spinnerJSX = isLoading ?
       <Box sx={{display: 'flex'}}>
         <CircularProgress/>
       </Box> : null;
+
   const articleJSX = (articles) => {
     return (
         <div>
@@ -30,9 +33,7 @@ const Article = () => {
         </div>
     )
   }
-  const notFoundHandler = () => {
-    history.push("/404")
-  }
+
   const contentJSX = response ? response.map(function (item, index) {
     console.log('articleId', articleId._id)
     console.log('itemId', item._id)
