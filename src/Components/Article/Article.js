@@ -4,16 +4,12 @@ import useFetch from "../../Hooks/useFetch";
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
 import ReactMarkdown from "react-markdown";
-import NotFound from "../NotFound/NotFound";
-import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
-import ReactPlayer from "react-player";
 import {Header} from "../Header/Header"
 
 const Article = () => {
-  let history = useHistory();
   const articleId = useParams();
   console.log(articleId)
-  const url = '/articles'
+  const url = `/articles/${articleId._id}`
   const [{isLoading, response, error}, doFetch] = useFetch(url);
 
   useEffect(() => {
@@ -21,35 +17,31 @@ const Article = () => {
   }, [doFetch])
 
   const spinnerJSX = isLoading ?
-      <Box sx={{display: 'flex'}}>
-        <CircularProgress/>
-      </Box> : null;
+      <h1>
+        Идёт загрузка
+      </h1> : null;
 
   const articleJSX = (articles) => {
     return (
         <div>
           <ReactMarkdown children={articles}/>
-
         </div>
     )
   }
 
-  const contentJSX = response ? response.map(function (item, index) {
-    console.log('articleId', articleId._id)
-    console.log('itemId', item._id)
-    if (articleId._id === item._id) {
-      return (<div className="article-container" key={index}>
+
+  const contentJSX = response ?
+      <div className="article-container">
         <div className="article-container__content">
           <h1 className="article-header">
-            {item.header}
+            {response.header}
           </h1>
           <div>
-            {articleJSX(item.contents)}
+            {articleJSX(response.contents)}
           </div>
         </div>
-      </div>)
-    }
-  }) : null
+      </div> : null;
+
   return (
       <div>
         <Header/>
