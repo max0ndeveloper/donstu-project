@@ -32,15 +32,10 @@ const Main = () => {
     )
   }
 
-
-
-
-
   const contentJSX = response ? response.map(function (item, index) {
     const articleHandler = () => {
-      history.push(`/articles/${item._id}/${item.header}`)
+      history.push(`/articles/${item._id}`)
     };
-
 
 
     return (<div className="main-container" key={index} onClick={articleHandler}>

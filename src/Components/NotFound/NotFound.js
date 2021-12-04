@@ -4,23 +4,12 @@ import QR from "../../Assets/images/QR.png"
 import {useHistory} from "react-router-dom"
 import useFetch from "../../Hooks/useFetch";
 
-
-
 const NotFound = () => {
   let history = useHistory();
 
   const goBack = () => {
     history.push("/")
   }
-
-
-  const url = '/articles'
-
-  const [{isLoading, response, error}, doFetch] = useFetch(url);
-  useEffect(() => {
-    doFetch()
-  }, [doFetch])
-
 
   return (
       <div className="notFound-page">
