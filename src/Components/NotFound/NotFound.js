@@ -2,7 +2,6 @@ import React, {useEffect} from "react";
 import Smile from '../../Assets/images/smile.png'
 import QR from "../../Assets/images/QR.png"
 import {useHistory} from "react-router-dom"
-import useFetch from "../../Hooks/useFetch";
 
 const NotFound = () => {
   let history = useHistory();

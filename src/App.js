@@ -14,7 +14,9 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={Main}/>
-            <Route path="/articles/:_id" exact component={Article}/>
+            <Route path="/articles/:_id" component={Article}/>
+            {/*<Route path="/articles/" component={ArticlePage}/>*/}
+            {/*<Route path="/articles/:_id" exact component={Article}/>*/}
             <Route path="*" exact component={NotFound}/>
           </Switch>
         </BrowserRouter>
