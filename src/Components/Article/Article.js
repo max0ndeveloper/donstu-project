@@ -1,10 +1,9 @@
 import React, {useEffect} from 'react'
 import {NavLink, useHistory, useParams} from "react-router-dom";
 import useFetch from "../../Hooks/useFetch";
-import Box from "@mui/material/Box";
-import CircularProgress from "@mui/material/CircularProgress";
 import ReactMarkdown from "react-markdown";
 import {Header} from "../Header/Header"
+import {Helmet} from "react-helmet";
 
 const Article = () => {
   const articleId = useParams();
@@ -29,13 +28,41 @@ const Article = () => {
     )
   }
 
+  const TITLE = "Статьи | StaySecured"
+
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }
+
 
   const contentJSX = response ?
       <div className="article-container">
+        <Helmet>
+          <title>
+            {TITLE}
+          </title>
+        </Helmet>
+
         <div className="article-container__content">
+          <div className="author">
+            <div className="author-avatar">
+              <img className="author-avatar-image"
+                   src={response.authorId.avatar ? 'https://static.staysecured.online/' + response.authorId.avatar + '.webp' : 'https://static.staysecured.online/61bcc20fae78196359bc3d38.webp'}
+                   alt=""/>
+            </div>
+            <p className="author-name">
+              {response.authorId.firstName} {response.authorId.lastName}
+            </p>
+            <p className="articleDate">
+              {new Date(`${response.createTime}`).toLocaleString("ru", options)}
+            </p>
+          </div>
           <h1 className="article-header">
             {response.header}
           </h1>
+          <hr/>
           <div>
             {articleJSX(response.contents)}
           </div>

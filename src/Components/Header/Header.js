@@ -39,12 +39,6 @@ export const Header = () => {
         <div className="header-logo" onClick={goBack}>
           <img className="header-logo__logo" src={Logo} alt="Logo"/>
         </div>
-        <div className="header-input">
-          <input type="text"
-                 id="header-input__text"
-                 placeholder="Поиск по статьям"
-                 onChange={event => onSearch(event.target.value)}/>
-        </div>
         <div className="header-button">
           <div className="header-button_reg">
             <p className="header-button_reg-text">Регистрация</p>
