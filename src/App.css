@@ -3,12 +3,31 @@
 html, body {
   height: 100%;
   width: 100%;
+  scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  /*background: linear-gradient(180deg, #00c6fb, #005bea);*/
+  background: #aaa;
+}
+
 
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   background-color: #EEEEEE;
+  overflow-y: scroll;
 }
 
 p {
@@ -23,8 +42,9 @@ p {
 .container {
   max-width: 945px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 30px 15px;
 }
+
 
 
 
@@ -79,7 +99,7 @@ img {
 
 .header-button {
   display: flex;
-  margin: 5px 0 5px 0;
+  margin: 5px 0 5px 500px;
 }
 
 .header-button_reg {
@@ -145,10 +165,55 @@ img {
   margin: 30px;
 }
 
+.author {
+  display: flex;
+}
 
+.author-avatar-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 70px;
+}
+
+
+
+.author-name {
+  font-size: 19px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.article-tags {
+  display: flex;
+}
+
+.mainDate {
+  margin-left: 400px;
+  margin-top: 5px;
+}
+
+.article-tags__img {
+  margin-top: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+
+
+}
+
+.article-tags__text {
+  font-size: 18px;
+  font-weight: normal;
+  color: #AEAEAE;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
 
 
 /*Article page*/
+
+
 
 
 .article-container {
@@ -159,9 +224,16 @@ img {
   background-color: #fff;
 }
 
+
+
 .article-container__content {
   width: 885px;
   margin: 30px;
+}
+
+.articleDate {
+  margin-left: 480px;
+  margin-top: 5px;
 }
 
 
@@ -265,4 +337,5 @@ img {
   margin-left: 14px;
   margin-top: 20px;
   line-height: 19px;
+
 }
