@@ -178,9 +178,10 @@ img {
 
 
 .author-name {
-  font-size: 19px;
+  font-size: 18px;
   margin-top: 5px;
   margin-left: 10px;
+  margin-right: 400px;
 }
 
 .article-tags {
@@ -188,7 +189,7 @@ img {
 }
 
 .mainDate {
-  margin-left: 400px;
+  /*margin-left: 400px;*/
   margin-top: 5px;
 }
 
@@ -232,8 +233,8 @@ img {
 }
 
 .articleDate {
-  margin-left: 480px;
   margin-top: 5px;
+  margin-left: 75px;
 }
 
 
@@ -338,4 +339,404 @@ img {
   margin-top: 20px;
   line-height: 19px;
 
+}
+
+
+/*Registration*/
+
+.wrapper {
+  background-image: url("../src/Assets/images/bckgrnd.png");
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+
+
+.registration-container {
+
+  max-width: 945px;
+
+  padding: 220px 710px 50px;
+
+
+
+}
+
+.registration__background {
+  position: absolute;
+  width: 500px;
+  height: 678px;
+  background: #0085FF;
+  border-radius: 5px;
+  z-index: -999;
+  margin-left: 30px;
+}
+
+.registration {
+  width: 500px;
+  height: 650px;
+
+
+  background: #FFFFFF;
+  box-shadow: 15px 15px 30px 8px rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+}
+
+.registration__logo {
+  width: 305px;
+  height: 50px;
+  margin-left: 97px;
+  padding-top: 20px;
+}
+
+.registration__logo:hover {
+  cursor: pointer;
+}
+
+.registration__logo-img {
+}
+
+.registration-header__text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 48px;
+  margin-left: 105px;
+  color: #000000;
+}
+
+
+
+.form-registration {
+  height: 317px;
+  width: 295px;
+  margin-left: 105px;
+}
+
+.form-registration__input {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  margin-top: 30px;
+}
+
+.form-registration__input:active, :hover, :focus {
+  outline: none;
+}
+
+.registration__button {
+  width: 180px;
+  height: 45px;
+  background: #0085FF;
+  border-radius: 5px;
+  margin-left: 160px;
+  margin-top: 40px;
+}
+
+.registration__button:hover {
+  cursor: pointer;
+}
+
+.registration__button-text {
+  padding-top: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.checkAccount {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 170px ;
+}
+
+.checkAccount-text {
+  margin-top: 0;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+
+.checkAccount__Login {
+  margin-top: 0;
+  margin-left: 5px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  text-decoration: underline;
+}
+
+.checkAccount__Login:hover {
+  cursor: pointer;
+}
+
+
+/*Login*/
+
+.login-container {
+
+  max-width: 945px;
+
+  padding: 220px 710px 50px;
+
+
+
+}
+
+.login__background {
+  position: absolute;
+  width: 500px;
+  height: 613px;
+  background: #0085FF;
+  border-radius: 5px;
+  z-index: -999;
+  margin-left: 30px;
+}
+
+.login {
+  width: 500px;
+  height: 583px;
+
+
+  background: #FFFFFF;
+  box-shadow: 15px 15px 30px 8px rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+}
+
+.login__logo {
+  width: 305px;
+  height: 50px;
+  margin-left: 97px;
+  padding-top: 20px;
+}
+
+.login__logo:hover {
+  cursor: pointer;
+}
+
+.login__logo-img {
+}
+
+.login-header__text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 48px;
+  margin-left: 105px;
+  color: #000000;
+}
+
+
+.form-login {
+  height: 250px;
+  width: 295px;
+  margin-left: 105px;
+}
+
+.form-login__input {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  margin-top: 50px;
+}
+
+.form-login__input:active, :hover, :focus {
+  outline: none;
+}
+
+.login__button {
+  width: 180px;
+  height: 45px;
+  background: #0085FF;
+  border-radius: 5px;
+  margin-left: 160px;
+  margin-top: 40px;
+}
+
+.login__button:hover {
+  cursor: pointer;
+}
+
+.login__button-text {
+  padding-top: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.checkAccount {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 170px ;
+}
+
+.checkAccount-text {
+  margin-top: 0;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+
+.checkAccount__Login {
+  margin-top: 0;
+  margin-left: 5px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  text-decoration: underline;
+}
+
+.checkAccount__Login:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.control {
+  margin-top: 30px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  cursor: pointer;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #E2E1E1;
+  border: 0px solid #000000;
+  border-radius: 0px;
+}
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: #AEAEAE;
+}
+
+.control input:checked ~ .control_indicator {
+  background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+  background: #0e6647d;
+}
+.control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+.control-checkbox .control_indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+  border-color: #7b7b7b;
+}
+.control-checkbox .control_indicator::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  background: #2aa1c0;
+  border-radius: 3rem;
+  opacity: 0.6;
+  z-index: 99999;
+  transform: scale(0);
+}
+@keyframes s-ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes s-ripple-dup {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+.control-checkbox input + .control_indicator::before {
+  animation: s-ripple 250ms ease-out;
+}
+.control-checkbox input:checked + .control_indicator::before {
+  animation-name: s-ripple-dup;
 }
