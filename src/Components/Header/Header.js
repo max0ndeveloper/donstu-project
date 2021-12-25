@@ -11,6 +11,14 @@ export const Header = () => {
     history.push(`/`)
   }
 
+  const registrationHandler = () => {
+    history.push('/registration')
+  }
+
+  const loginHandler = () => {
+    history.push('/login')
+  }
+
   const url = '/articles'
 
   const [{isLoading, response, error}, doFetch] = useFetch(url);
@@ -40,10 +48,10 @@ export const Header = () => {
           <img className="header-logo__logo" src={Logo} alt="Logo"/>
         </div>
         <div className="header-button">
-          <div className="header-button_reg">
+          <div className="header-button_reg" onClick={registrationHandler}>
             <p className="header-button_reg-text">Регистрация</p>
           </div>
-          <div className="header-button_log">
+          <div className="header-button_log" onClick={loginHandler}>
             <p className="header-button_log-text">
               Вход
             </p>

@@ -50,6 +50,8 @@ const Main = () => {
     }
 
 
+
+
     return (
         <div className="main-container" key={index} onClick={articleHandler}>
           <Helmet>

@@ -62,6 +62,9 @@ const Article = () => {
           <h1 className="article-header">
             {response.header}
           </h1>
+          <p className="article-description">
+            {response.description}
+          </p>
           <hr/>
           <div>
             {articleJSX(response.contents)}
